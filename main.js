@@ -27,6 +27,7 @@ function draw() {
   drawBall();
   x += dx;
   y += dy;
+  drawPaddle();
   if(x + dx > canvas.width - ballRadius || x + dx < 0) {
     dx = -dx;
   }
@@ -70,4 +71,3 @@ function keyUpHandler(e) {
 
 
 setInterval(draw, 10);
-setInterval(drawPaddle, 10);
