@@ -72,6 +72,20 @@ function drawPaddle() {
   ctx.closePath();
 }
 
+function drawBricks() {
+  for(var c = 0; c < brickColumnCount; c++) {
+    for(var r = 0; r < brickRowCount; r++) {
+      bricks[c][r].x = 0;
+      bricks[c][r].y = 0;
+      ctx.beginPath();
+      ctx.rect(0, 0, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
+    }
+  }
+}
+
 function keyDownHandler(e) {
   if(e.keyCode == 39) {
     rightPressed = true;
@@ -93,3 +107,4 @@ function keyUpHandler(e) {
 
 
 setInterval(draw, 10);
+
