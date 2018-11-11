@@ -18,6 +18,7 @@ var brickPadding = 10;
 var brickOffsetTop = 30;
 var brickOffsetLeft = 30;
 var ballColor = false;
+var score = 0;
 
 var bricks = []
 for(var c = 0; c < brickColumnCount; c++) {
@@ -128,6 +129,12 @@ function collisionDetection() {
       }
     }
   }
+}
+
+function drawScore() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Score: "+score, 8, 20)
 }
 
 
