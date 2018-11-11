@@ -49,6 +49,7 @@ function draw() {
   x += dx;
   y += dy;
   drawPaddle();
+  drawScore();
   collisionDetection();
   if(x + dx > canvas.width - ballRadius || x + dx < 0) {
     dx = -dx;
