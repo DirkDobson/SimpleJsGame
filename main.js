@@ -125,6 +125,7 @@ function collisionDetection() {
           dy = -dy;
           b.status = 0;
           ballColor = !ballColor
+          score++;
         }
       }
     }
