@@ -126,8 +126,10 @@ function collisionDetection() {
           dy = -dy;
           b.status = 0;
           ballColor = !ballColor
-          score++;
-          if(score == brickRowCount*brickColumnCount) {
+          if ( score > 0 ) {
+          score = score * 2;
+          } else { score++ }
+          if(score == 16384) {
             alert("YOU WIN, YOUR SCORE IS " + score);
             document.location.reload();
           }
