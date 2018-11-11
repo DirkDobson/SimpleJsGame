@@ -127,6 +127,10 @@ function collisionDetection() {
           b.status = 0;
           ballColor = !ballColor
           score++;
+          if(score == brickRowCount*brickColumnCount) {
+            alert("YOU WIN");
+            document.location.reload();
+          }
         }
       }
     }
