@@ -148,7 +148,7 @@ function drawScore() {
 
 function mouseMoveHandler(e) {
   var relativeX = e.clientX - canvas.offsetLeft;
-  if ( relativeX > 0 && relativeX < canvas.width ) {
+  if ( relativeX  > 0 + paddleWidth/2 && relativeX < canvas.width - paddleWidth/2 ) {
     paddleX = relativeX - paddleWidth/2;
   }
 }
