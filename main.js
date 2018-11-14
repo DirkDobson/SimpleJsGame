@@ -2,8 +2,8 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = canvas.width/2;
 var y = canvas.height-30;
-var dx = 2;
-var dy = -2;
+var dx = 5;
+var dy = -5;
 var ballRadius = 10;
 var paddleHeight = 10;
 var paddleWidth = 75;
@@ -73,8 +73,8 @@ function draw() {
         else {
             x = canvas.width/2;
             y = canvas.height-30;
-            dx = 2;
-            dy = -2;
+            dx = 5;
+            dy = -5;
             paddleX = (canvas.width-paddleWidth)/2;
         }
       }
@@ -85,6 +85,7 @@ function draw() {
 else if(leftPressed && paddleX > 0) {
     paddleX -= 7;
 }
+requestAnimationFrame(draw);
 }
 
 function drawPaddle() {
@@ -174,5 +175,5 @@ function mouseMoveHandler(e) {
 
 
 
-setInterval(draw, 10);
+draw();
 
