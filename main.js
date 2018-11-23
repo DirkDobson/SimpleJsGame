@@ -172,8 +172,4 @@ function mouseMoveHandler(e) {
   }
 }
 
-
-
-
 draw();
-
